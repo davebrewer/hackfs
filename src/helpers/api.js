@@ -1,11 +1,11 @@
-const url = process.env.NEXT_PUBLIC_API_URL;
+const url = process.env.REACT_APP_API_URL;
 
 // Headers
 const getOptions = {
   method: 'GET',
   headers: {
     Accept: 'application/json',
-    'X-API-Key': process.env.NEXT_PUBLIC_POAP_API_KEY
+    'X-API-Key': process.env.REACT_APP_POAP_API_KEY
   }
 };
 
@@ -14,8 +14,8 @@ const options = {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    Authorization: process.env.NEXT_PUBLIC_POAP_BEARER,
-    'X-API-Key': process.env.NEXT_PUBLIC_POAP_API_KEY
+    Authorization: process.env.REACT_APP_POAP_BEARER,
+    'X-API-Key': process.env.REACT_APP_POAP_API_KEY
   },
   body: null
 };
@@ -24,8 +24,8 @@ const optionsCreate = {
   method: 'POST',
   headers: {
     Accept: 'application/json',
-    Authorization: process.env.NEXT_PUBLIC_POAP_BEARER,
-    'X-API-Key': process.env.NEXT_PUBLIC_POAP_API_KEY
+    Authorization: process.env.REACT_APP_POAP_BEARER,
+    'X-API-Key': process.env.REACT_APP_POAP_API_KEY
   },
   body: null
 };
@@ -34,8 +34,8 @@ const getOptionsWithBearer = {
   method: 'GET',
   headers: {
     Accept: 'application/json',
-    Authorization: process.env.NEXT_PUBLIC_POAP_BEARER,
-    'X-API-Key': process.env.NEXT_PUBLIC_POAP_API_KEY
+    Authorization: process.env.REACT_APP_POAP_BEARER,
+    'X-API-Key': process.env.REACT_APP_POAP_API_KEY
   }
 };
 
@@ -43,7 +43,7 @@ const putOptions = {
   method: 'PUT',
   headers: {
     Accept: 'application/json',
-    'X-API-Key': process.env.NEXT_PUBLIC_POAP_API_KEY
+    'X-API-Key': process.env.REACT_APP_POAP_API_KEY
   }
 };
 
@@ -52,8 +52,8 @@ export const postWithBearerOptions = {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    Authorization: process.env.NEXT_PUBLIC_POAP_BEARER,
-    'X-API-Key': process.env.NEXT_PUBLIC_POAP_API_KEY
+    Authorization: process.env.REACT_APP_POAP_BEARER,
+    'X-API-Key': process.env.REACT_APP_POAP_API_KEY
   },
   body: null
 };

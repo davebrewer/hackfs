@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { PoapsContext } from'./_app';
-import Footer from '../components/Footer';
+import { PoapsContext } from'../index';
 import { buildCreatePoapForm, createEvent } from '../helpers/api';
 import { lsAddPoap } from '../helpers/local-storage';
 
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-
-import { TextField, Checkbox, FormControlLabel, Button, TextareaAutosize } from '@material-ui/core';
+import { TextField, Button, TextareaAutosize } from '@material-ui/core';
 
 
 export default function Create() {
@@ -35,11 +31,6 @@ export default function Create() {
 
   return (
     <div>
-      <Head>
-        <title>POAPMAN - Create your Poap</title>
-        <meta name="description" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <main style={{ paddingTop: '80px'}}> 
         <h1>Create your Poap!</h1>
@@ -58,23 +49,12 @@ export default function Create() {
             <TextField fullWidth margin="normal" name="expiry_date" type="text" placeholder="Expiry date" /><br/>
             <TextField fullWidth margin="normal" name="year" type="text" placeholder="Year" /><br/>
             <TextField fullWidth margin="normal" name="event_url" type="text" placeholder="Event URL" /><br/>
-            {/* <FormControlLabel
-              control={
-                <Checkbox name="virtual_event" />
-              }
-              label="Virtual Event"
-            /><br/> */}
             <label><input name="virtual_event" type="checkbox" /> Virtual Event</label><br/>
             <TextField fullWidth margin="normal" name="image" type="file" accept="image/png, image/gif" /><br/>
             <TextField fullWidth margin="normal" name="secret_code" type="text" placeholder="Edit Code" /><br/>
             <TextField fullWidth margin="normal" name="email" type="email" placeholder="Email" /><br/>
-            {/* <FormControlLabel
-              control={
-                <Checkbox name="private_event" />
-              }
-              label="Private Event"
-            /><br/> */}
             <label><input name="private_event" type="checkbox" /> Private Event</label><br/>
+            <br/>
             <Button type="submit" variant='outlined'>Create</Button>
           </form>
         }
@@ -90,8 +70,6 @@ export default function Create() {
         }
 
       </main>
-
-      <Footer />
     </div>
   )
 }

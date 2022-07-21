@@ -4,7 +4,6 @@ export const lsCollection = () => {
 }
 
 export const lsDoesNotHaveID = (id) => {
-  const lsPoaps = lsCollection();
   const matchesLength = lsCollection().filter(poap => poap.id === id).length;
   return !matchesLength;
 }
@@ -22,7 +21,6 @@ export const lsRemovePoap = (poapId) => {
 export const lsUpdateOrder = (poapObj) => {
   console.log(poapObj)
   const updatedLsPoaps = lsCollection().filter(poap => poap.event_id !== poapObj.event_id);
-  updatedLsPoaps.push
   window.localStorage.setItem('lsPoaps', JSON.stringify([poapObj, ...updatedLsPoaps]));
 }
 

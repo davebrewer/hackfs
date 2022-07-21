@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from 'next/link';
+import { Link } from "react-router-dom";
 
 import { Grid, Card, CardContent } from '@material-ui/core';
 
@@ -8,6 +8,8 @@ const Cards = ({poaps}) => {
     if (!poaps) {
       return (<div>Loading...</div>)
     }
+
+    console.log(poaps);
 
     if (poaps && poaps.length === 0) {
       return (<div>You have no POAPs!</div>);
@@ -18,12 +20,12 @@ const Cards = ({poaps}) => {
         {poaps && poaps.map(poap => {
           return(
             <Grid key={poap.id} item xs="12" style={{marginBottom: '20px'}}>
-              <Link href={`/poap/${poap.id}`}>
+              <Link to={`/poap/${poap.id}`}>
                 <Card sx={{ display: 'flex' }} variant="outlined" style={{cursor: 'pointer'}}>
                   <CardContent>
                     <div style={{display:'flex'}}>
                       <div style={{width: '100px'}}>
-                        <img src={poap.image_url} style={{width: '100px', height: '100px'}} />
+                        <img alt="" src={poap.image_url} style={{width: '100px', height: '100px'}} />
                       </div>
                       <div  style={{marginLeft: '20px'}}>
                         <strong>{poap.name}</strong><br/>
