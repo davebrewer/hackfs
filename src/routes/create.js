@@ -30,9 +30,8 @@ export default function Create() {
   }
 
   return (
-    <div>
-
-      <main style={{ paddingTop: '80px'}}> 
+    <div className='container-margin-top'>
+      <main className='card card-padding'> 
         <h1>Create your Poap!</h1>
         <p>Create something brand new! Fill in the form and your new Poap will automatically be created and added to your management dashboard.</p>
 
@@ -55,7 +54,7 @@ export default function Create() {
             <TextField fullWidth margin="normal" name="email" type="email" placeholder="Email" /><br/>
             <label><input name="private_event" type="checkbox" /> Private Event</label><br/>
             <br/>
-            <Button type="submit" variant='outlined'>Create</Button>
+            <Button className='ButtonContained' type="submit" variant='contained'>Create</Button>
           </form>
         }
 

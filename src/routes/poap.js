@@ -89,39 +89,42 @@ export default function Poap() {
   }
 
   return (
-    <div style={{ paddingTop: '80px'}}>
+    <div className='container-margin-top'>
+      <div className='card card card-padding'>
 
-      <h1>Review and update<br/> your POAP</h1>
+        <h1>Review and update<br/> your POAP</h1>
 
-      <p style={{textAlign: 'center'}}>
-        <img alt="" src={poap.image_url} style={{width: '200px', height: '200px'}} />
-      </p>
+        <p style={{textAlign: 'center'}}>
+          <img alt="" src={poap.image_url} style={{width: '200px', height: '200px'}} />
+        </p>
 
-      <br/>
+        <br/>
 
-      <h2>Poap Stats</h2>
-      { mintInfo ? mintInfo.total : '#' } of { qrCodes ? qrCodes.length : '#'} minted.<br/> 
-      { `${ qrCodes && quantityClaimed()} of ${qrCodes ? qrCodes.length : '#'} claimed.`}<br/>
-      { mintInfo ? multipleHolders() : '#' } people's first poap!<br/>
+        <h2>Poap Stats</h2>
+        { mintInfo ? mintInfo.total : '#' } of { qrCodes ? qrCodes.length : '#'} minted.<br/> 
+        { `${ qrCodes && quantityClaimed()} of ${qrCodes ? qrCodes.length : '#'} claimed.`}<br/>
+        { mintInfo ? multipleHolders() : '#' } people's first poap!<br/>
 
-      <br/>
+        <br/>
 
-      <h2>Edit Poap</h2>
-      <form onSubmit={handleUpdate}>
-        <TextField fullWidth margin="normal" name="id" type="text" defaultValue={poap.id} disabled label="ID" /><br/>
-        <TextField fullWidth margin="normal" name="name" type="text" defaultValue={poap.name}  placeholder="Title" label="Title" /><br/>
-        <TextareaAutosize style={{ width: '100%' }} name="description" placeholder='Description' minRows={3}>{poap.description}</TextareaAutosize><br/>
-        <TextField fullWidth margin="normal" name="city" type="text" defaultValue={poap.city} placeholder="City" label="City" /><br/>
-        <TextField fullWidth margin="normal" name="country" type="text" defaultValue={poap.country} placeholder="Country" label="Country" /><br/>
-        <TextField fullWidth margin="normal" name="start_date" type="text" defaultValue={poap.start_date} placeholder="Start date" label="Start date" /><br/>
-        <TextField fullWidth margin="normal" name="end_date" type="text" defaultValue={poap.end_date} placeholder="End date" label="End date" /><br/>
-        <TextField fullWidth margin="normal" name="expiry_date" type="text" defaultValue={poap.expiry_date} placeholder="Expiry date" label="Expiry date" /><br/>
-        <label><input name="virtual_event" type="checkbox" defaultChecked={poap.virtual_event} ref={checkboxVirtualRef} /> Virtual Event</label><br/>
-        <TextField fullWidth margin="normal" name="event_url" type="text" defaultValue={poap.event_url} placeholder="Event URL" label="Event URL" /><br/>
-        <TextField fullWidth margin="normal" name="year" type="text" defaultValue={poap.year} placeholder="Year" label="Year" disabled /><br/>
-        <label><input name="private_event" type="checkbox" defaultChecked={poap.private_event} ref={checkboxPrivateRef} /> Private</label><br/>
-        <Button type="submit" variant='outlined'>Update</Button>
-      </form>
+        <h2>Edit Poap</h2>
+        <form onSubmit={handleUpdate}>
+          <TextField fullWidth margin="normal" name="id" type="text" defaultValue={poap.id} disabled label="ID" /><br/>
+          <TextField fullWidth margin="normal" name="name" type="text" defaultValue={poap.name}  placeholder="Title" label="Title" /><br/>
+          <TextareaAutosize style={{ width: '100%' }} name="description" placeholder='Description' minRows={3}>{poap.description}</TextareaAutosize><br/>
+          <TextField fullWidth margin="normal" name="city" type="text" defaultValue={poap.city} placeholder="City" label="City" /><br/>
+          <TextField fullWidth margin="normal" name="country" type="text" defaultValue={poap.country} placeholder="Country" label="Country" /><br/>
+          <TextField fullWidth margin="normal" name="start_date" type="text" defaultValue={poap.start_date} placeholder="Start date" label="Start date" /><br/>
+          <TextField fullWidth margin="normal" name="end_date" type="text" defaultValue={poap.end_date} placeholder="End date" label="End date" /><br/>
+          <TextField fullWidth margin="normal" name="expiry_date" type="text" defaultValue={poap.expiry_date} placeholder="Expiry date" label="Expiry date" /><br/>
+          <label><input name="virtual_event" type="checkbox" defaultChecked={poap.virtual_event} ref={checkboxVirtualRef} /> Virtual Event</label><br/>
+          <TextField fullWidth margin="normal" name="event_url" type="text" defaultValue={poap.event_url} placeholder="Event URL" label="Event URL" /><br/>
+          <TextField fullWidth margin="normal" name="year" type="text" defaultValue={poap.year} placeholder="Year" label="Year" disabled /><br/>
+          <label><input name="private_event" type="checkbox" defaultChecked={poap.private_event} ref={checkboxPrivateRef} /> Private</label><br/>
+          <br/>
+          <Button type="submit" variant='outlined'>Update</Button>
+        </form>
+      </div>
     </div>
   )
 }

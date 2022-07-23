@@ -28,8 +28,8 @@ const Hero = ({ count }) => {
         </>
       }
       <div style={{display: 'flex', justifyContent: 'space-between' }}>
-        {count >= 1 && <Link to="/manage"><Button variant="outlined" startIcon={<Settings />}>Manage</Button></Link>}
-        <Link style={{float:'right'}} to="/create"><Button variant="contained" startIcon={<Add />}>Create new</Button></Link>
+        <Link className='ButtonOutlined' to="/manage"><Button variant="outlined" startIcon={<Settings />}>Manage</Button></Link>
+        <Link className='ButtonContained' style={{float:'right'}} to="/create"><Button variant="contained" startIcon={<Add />}>Create new</Button></Link>
       </div>
     </>
   );
