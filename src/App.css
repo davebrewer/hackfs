@@ -60,7 +60,7 @@ h1 {
 }
 
 nav a { text-decoration: none; padding: 0 5px;}
-nav a.nav-active { text-decoration: underline; }
+nav a.nav-active { color: #000; }
 
 .footer {
   background: white;
