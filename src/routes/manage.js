@@ -50,7 +50,7 @@ export default function Home() {
         <h2>Add your Poap</h2>
         <form onSubmit={handleAddPoap}>
           <TextField type="number" name="event_id" placeholder="Poap ID" required ref={eventIdRef} />
-          <TextField type="text" name="secret_code" placeholder="SECRET CODE" pattern='^[0-9]{6}$' required ref={secretCodeRef} />
+          <TextField type="password" name="secret_code" placeholder="SECRET CODE" pattern='^[0-9]{6}$' required ref={secretCodeRef} />
           <br/><br/>
           <Button className='ButtonOutlined' type="submit" variant='outlined'>
             Add
