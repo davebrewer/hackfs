@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { getPoaps } from './helpers/api';
+import { getPoaps, createBearerToken } from './helpers/api';
 
 import { CssBaseline, MuiThemeProvider, Container } from '@material-ui/core';
 import theme from './theme';
@@ -30,6 +30,8 @@ const MyApp = () => {
   }
 
   React.useEffect(() => {
+    // createBearerToken();
+
     const savedLsPoaps = window.localStorage.getItem('lsPoaps');
     savedLsPoaps ? setupPoaps(savedLsPoaps) : setsPoaps([]);
   }, [])

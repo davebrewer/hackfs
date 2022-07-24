@@ -163,3 +163,21 @@ export const createEvent = async (formData) => {
   const response = await fetch(`${url}/events`, optionsCreate).catch(handleError);
   return response.json();
 }
+
+export const createBearerToken = async () => {
+  fetch('https://poapauth.auth0.com/oauth/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      "audience": "team2", 
+      "grant_type": "client_credentials", 
+      "client_id": process.env.REACT_APP_CLIENT_ID, 
+      "client_secret": process.env.REACT_APP_CLIENT_SECRET
+    }),
+  })
+  .then((res) => res.json())
+  .then((data) => {
+    console.log('bearer', data);
+  })
+  .catch((err) => console.log(err));
+}
