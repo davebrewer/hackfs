@@ -1,10 +1,10 @@
 # POAPMAN
 ## _All in one POAP creator management_
 
-POAPMAN helps POAP creators manage their created collections.
-The initial mvp gives users the ability to create, import and update their POAPs and view their claimed and minted statistics.
+POAPMAN helps POAP creators manage their collections.
+The initial mvp gives users the ability to create, import and update their POAPs and view their claim and mint statistics.
 
-## Features
+## App Features
 
 - Create new
 - Update existing
@@ -17,7 +17,7 @@ The initial mvp gives users the ability to create, import and update their POAPs
 - [ReactJS] - Modern JS framework / library
 - [react-router-dom] - Router to support hash routing for IPFS
 - [Poap API] - The POAP API to query collections
-- [Fleek] - IPFS/IPNS app hosting through github.
+- [Fleek] - IPFS/DNSLink decentralised web hosting with CI through github
   IPFS hash QmZXUkF1dEjMU1tBdNFdi9RoMCviC2hxmDPMnLXwHWNdE2
 - [Cloudflare] - Manging domain DNS between registrar and IPFS
 
