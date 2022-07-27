@@ -1,7 +1,11 @@
 # POAPMAN
 ## _All in one POAP creator management_
 
+<<<<<<< HEAD
 POAPMAN helps POAP creators manage their collections.
+=======
+POAPMAN helps POAP creators manage their created collections.
+>>>>>>> 3b9460cb6867e4d4eb7a154ecadd9d6fbe5b63c9
 The initial mvp gives users the ability to create, import and update their POAPs and view their claim and mint statistics.
 
 ## App Features
